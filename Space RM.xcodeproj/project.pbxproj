@@ -296,6 +296,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = "Space RM/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick and Morty";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -327,6 +328,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = "Space RM/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick and Morty";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

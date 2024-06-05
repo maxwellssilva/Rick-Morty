@@ -11,17 +11,17 @@ class CharacterCardCell: UITableViewCell {
 
     private lazy var characterImage: UIImageView = {
         let image = UIImageView()
-        characterImage.layer.cornerRadius = 8
-        characterImage.clipsToBounds = true
-        characterImage.translatesAutoresizingMaskIntoConstraints = false
+        image.layer.cornerRadius = 8
+        image.clipsToBounds = true
+        image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
     
     private lazy var characterName: UILabel = {
         let label = UILabel()
-        characterName.numberOfLines = 0
-        characterName.adjustsFontSizeToFitWidth = true
-        characterName.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        label.adjustsFontSizeToFitWidth = true
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
