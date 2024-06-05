@@ -9,12 +9,25 @@ import UIKit
 
 class CharacterCardCell: UITableViewCell {
 
-    var characterImage = UIImageView()
-    var characterName = UILabel()
+    private lazy var characterImage: UIImageView = {
+        let image = UIImageView()
+        characterImage.layer.cornerRadius = 8
+        characterImage.clipsToBounds = true
+        characterImage.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
+    
+    private lazy var characterName: UILabel = {
+        let label = UILabel()
+        characterName.numberOfLines = 0
+        characterName.adjustsFontSizeToFitWidth = true
+        characterName.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setConfigurationCell()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -24,24 +37,6 @@ class CharacterCardCell: UITableViewCell {
     func set(character: Characters) {
         characterImage.image = character.image
         characterName.text = character.name
-    }
-    
-    func setConfigurationCell() {
-        setupCharacterName()
-        setupCharacterImage()
-        setupConstraints()
-    }
-    
-    func setupCharacterImage() {
-        characterImage.layer.cornerRadius = 8
-        characterImage.clipsToBounds = true
-        characterImage.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    func setupCharacterName() {
-        characterName.numberOfLines = 0
-        characterName.adjustsFontSizeToFitWidth = true
-        characterName.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func setupConstraints() {
