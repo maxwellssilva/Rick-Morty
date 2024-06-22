@@ -15,6 +15,7 @@
 		82970D742C08CFC50076AA9F /* CharacterCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82970D732C08CFC50076AA9F /* CharacterCardCell.swift */; };
 		82970D762C08F9BC0076AA9F /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82970D752C08F9BC0076AA9F /* CharacterModel.swift */; };
 		82970D782C08FFAF0076AA9F /* ImagesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82970D772C08FFAF0076AA9F /* ImagesMock.swift */; };
+		82E2AE3C2C27402F008ECD5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E2AE3B2C27402F008ECD5E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		82970D732C08CFC50076AA9F /* CharacterCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardCell.swift; sourceTree = "<group>"; };
 		82970D752C08F9BC0076AA9F /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		82970D772C08FFAF0076AA9F /* ImagesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesMock.swift; sourceTree = "<group>"; };
+		82E2AE3B2C27402F008ECD5E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				82970D732C08CFC50076AA9F /* CharacterCardCell.swift */,
 				82970D752C08F9BC0076AA9F /* CharacterModel.swift */,
 				82970D772C08FFAF0076AA9F /* ImagesMock.swift */,
+				82E2AE3B2C27402F008ECD5E /* DetailViewController.swift */,
 			);
 			path = "Space RM";
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				82395D3B2BDC22B20053AC73 /* AppDelegate.swift in Sources */,
 				82395D3D2BDC22B20053AC73 /* SceneDelegate.swift in Sources */,
 				82970D782C08FFAF0076AA9F /* ImagesMock.swift in Sources */,
+				82E2AE3C2C27402F008ECD5E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
