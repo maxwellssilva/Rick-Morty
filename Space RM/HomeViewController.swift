@@ -73,7 +73,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension HomeViewController {
-    
     func fetchData() -> [Characters] {
         let character1 = Characters(image: Images.rickSanchez, name: "Rick Sanchez")
         let character2 = Characters(image: Images.mortySmith, name: "Morty Smith")
