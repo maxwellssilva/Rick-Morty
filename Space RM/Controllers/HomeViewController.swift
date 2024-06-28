@@ -9,10 +9,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var characters: [Characters] = []
+    var characters: [CharacterModel] = []
     
     struct Cells {
-        static let charactersCell = "CharacterCardCell"
+        static let identifier = "CharacterCardCell"
     }
     
     private var searchBar: UISearchBar = {
@@ -34,13 +34,19 @@ class HomeViewController: UIViewController {
         title = "Personagens"
         setupComponents()
         setTableViewDelegates()
-        characters = fetchData()
+        //characters = fetchData()
+        HomeService.getImage(urlString: "API") { data in
+            guard let data else { return }
+            DispatchQueue.main.async {
+                CharacterCardCell.image = UIImage(data: data)
+            }
+        }
     }
 
     func setTableViewDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(CharacterCardCell.self, forCellReuseIdentifier: Cells.charactersCell)
+        tableView.register(CharacterCardCell.self, forCellReuseIdentifier: Cells.identifier)
     }
     
     func setupComponents() {
@@ -65,17 +71,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.charactersCell) as! CharacterCardCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.identifier) as! CharacterCardCell
         let character = characters[indexPath.row]
         cell.set(character: character)
         return cell
     }
 }
 
-extension HomeViewController {
-    func fetchData() -> [Characters] {
-        let character1 = Characters(image: Images.rickSanchez, name: "Rick Sanchez")
-        let character2 = Characters(image: Images.mortySmith, name: "Morty Smith")
-        return [character1, character2]
-    }
-}
+//extension HomeViewController {
+//    func fetchData() -> [CharacterModel] {
+//        let character1 = CharacterModel(image: Images.rickSanchez, name: "Rick Sanchez", specie: "Humano")
+//        let character2 = CharacterModel(image: Images.mortySmith, name: "Morty Smith", specie: "Humano")
+//        return [character1, character2]
+//    }
+//}
