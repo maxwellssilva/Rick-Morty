@@ -15,6 +15,7 @@
 		82970D742C08CFC50076AA9F /* CharacterCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82970D732C08CFC50076AA9F /* CharacterCardCell.swift */; };
 		82970D762C08F9BC0076AA9F /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82970D752C08F9BC0076AA9F /* CharacterModel.swift */; };
 		82970D782C08FFAF0076AA9F /* ImagesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82970D772C08FFAF0076AA9F /* ImagesMock.swift */; };
+		82A2C9422C2F5A6C001A33F9 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A2C9412C2F5A6C001A33F9 /* HomeService.swift */; };
 		82E2AE3C2C27402F008ECD5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E2AE3B2C27402F008ECD5E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		82970D732C08CFC50076AA9F /* CharacterCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardCell.swift; sourceTree = "<group>"; };
 		82970D752C08F9BC0076AA9F /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		82970D772C08FFAF0076AA9F /* ImagesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesMock.swift; sourceTree = "<group>"; };
+		82A2C9412C2F5A6C001A33F9 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		82E2AE3B2C27402F008ECD5E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,18 +64,59 @@
 		82395D392BDC22B20053AC73 /* Space RM */ = {
 			isa = PBXGroup;
 			children = (
-				82395D3A2BDC22B20053AC73 /* AppDelegate.swift */,
-				82395D3C2BDC22B20053AC73 /* SceneDelegate.swift */,
-				82395D3E2BDC22B20053AC73 /* HomeViewController.swift */,
+				82A2C9402C2F52D3001A33F9 /* Resources */,
+				82A2C93D2C2F5245001A33F9 /* Model */,
+				82A2C93E2C2F524D001A33F9 /* View */,
+				82A2C93F2C2F5253001A33F9 /* Controllers */,
+				82A2C93C2C2F523D001A33F9 /* Service */,
 				82395D432BDC22B50053AC73 /* Assets.xcassets */,
 				82395D452BDC22B50053AC73 /* LaunchScreen.storyboard */,
 				82395D482BDC22B50053AC73 /* Info.plist */,
-				82970D732C08CFC50076AA9F /* CharacterCardCell.swift */,
-				82970D752C08F9BC0076AA9F /* CharacterModel.swift */,
 				82970D772C08FFAF0076AA9F /* ImagesMock.swift */,
-				82E2AE3B2C27402F008ECD5E /* DetailViewController.swift */,
 			);
 			path = "Space RM";
+			sourceTree = "<group>";
+		};
+		82A2C93C2C2F523D001A33F9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				82A2C9412C2F5A6C001A33F9 /* HomeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		82A2C93D2C2F5245001A33F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82970D752C08F9BC0076AA9F /* CharacterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		82A2C93E2C2F524D001A33F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82970D732C08CFC50076AA9F /* CharacterCardCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		82A2C93F2C2F5253001A33F9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				82395D3E2BDC22B20053AC73 /* HomeViewController.swift */,
+				82E2AE3B2C27402F008ECD5E /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		82A2C9402C2F52D3001A33F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82395D3A2BDC22B20053AC73 /* AppDelegate.swift */,
+				82395D3C2BDC22B20053AC73 /* SceneDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +195,7 @@
 				82395D3B2BDC22B20053AC73 /* AppDelegate.swift in Sources */,
 				82395D3D2BDC22B20053AC73 /* SceneDelegate.swift in Sources */,
 				82970D782C08FFAF0076AA9F /* ImagesMock.swift in Sources */,
+				82A2C9422C2F5A6C001A33F9 /* HomeService.swift in Sources */,
 				82E2AE3C2C27402F008ECD5E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
