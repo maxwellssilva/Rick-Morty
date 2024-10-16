@@ -9,7 +9,7 @@ import UIKit
 
 struct CharacterModel {
     //var id: Int
-    var image: String
+    var image: UIImage
     var name: String
     var specie: String
     //var gender: String

@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.backgroundColor = .init(named: "wallpaper")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = 100
         return tableView
@@ -34,13 +35,11 @@ class HomeViewController: UIViewController {
         title = "Personagens"
         setupComponents()
         setTableViewDelegates()
-        //characters = fetchData()
-        HomeService.getImage(urlString: "API") { data in
-            guard let data else { return }
-            DispatchQueue.main.async {
-                CharacterCardCell.image = UIImage(data: data)
-            }
-        }
+        characters = fetchData()
+//        HomeService.getImage(urlString: "API") { data in
+//            guard let data else { return }
+//            DispatchQueue.main.async { }
+//        }
     }
 
     func setTableViewDelegates() {
@@ -78,10 +77,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-//extension HomeViewController {
-//    func fetchData() -> [CharacterModel] {
-//        let character1 = CharacterModel(image: Images.rickSanchez, name: "Rick Sanchez", specie: "Humano")
-//        let character2 = CharacterModel(image: Images.mortySmith, name: "Morty Smith", specie: "Humano")
-//        return [character1, character2]
-//    }
-//}
+extension HomeViewController {
+    func fetchData() -> [CharacterModel] {
+        let character1 = CharacterModel(image: Images.rickSanchez, name: "Rick Sanchez", specie: "Humano")
+        let character2 = CharacterModel(image: Images.mortySmith, name: "Morty Smith", specie: "Humano")
+        return [character1, character2]
+    }
+}
